@@ -1299,3 +1299,29 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== PRINT STYLES - Hỗ trợ xuất PDF minh chứng ===== */
+@media print {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .cursor, .cursor-ring, .nav-overlay, .hamburger {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .navbar {
+        position: relative !important;
+        padding: 10px 20px !important;
+        background: white !important;
+        color: black !important;
+    }
+}
